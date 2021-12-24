@@ -10,3 +10,8 @@
 0:0:0:0:0:0:0:1 - - [24/Dec/2021:19:27:02 +0900] "GET /exampleJsp/NewFile.jsp HTTP/1.1" 200 182
 127.0.0.1 - - [24/Dec/2021:19:44:33 +0900] "GET / HTTP/1.1" 404 807
 0:0:0:0:0:0:0:1 - - [24/Dec/2021:19:44:35 +0900] "GET /exampleJsp/NewFile.jsp HTTP/1.1" 200 185
+127.0.0.1 - - [24/Dec/2021:21:52:18 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [24/Dec/2021:21:52:20 +0900] "GET /exampleJsp/NewFile.jsp HTTP/1.1" 200 188
+0:0:0:0:0:0:0:1 - - [24/Dec/2021:21:52:42 +0900] "GET /exampleJsp/FunUtils.java HTTP/1.1" 200 137
+0:0:0:0:0:0:0:1 - - [24/Dec/2021:21:54:52 +0900] "GET /exampleJsp/NewFile.jsp HTTP/1.1" 200 215
+0:0:0:0:0:0:0:1 - - [24/Dec/2021:21:55:20 +0900] "GET /exampleJsp/NewFile.jsp HTTP/1.1" 200 215
