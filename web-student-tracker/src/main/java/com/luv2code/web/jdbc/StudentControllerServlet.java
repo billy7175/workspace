@@ -40,12 +40,53 @@ public class StudentControllerServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		try {
-			// list the students ... in mvc fashion
-			listStudents(request, response);	
-		}catch(Exception exc){
+			// read the "command" parameter
+			String theCommand = request.getParameter("command");
+			
+			// if the command is missing, then default to listing students
+			if (theCommand == null) {
+				theCommand = "LIST";
+			}
+			
+			// route to the appropriate method
+			switch (theCommand) {
+			
+			case "LIST":
+				listStudents(request, response);
+				break;
+				
+			case "ADD":
+				addStudent(request, response);
+				break;
+				
+			default:
+				listStudents(request, response);
+			}
+				
+		}
+		catch (Exception exc) {
 			throw new ServletException(exc);
-		}		
+		}
 		
+	}
+
+
+
+	private void addStudent(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+		// read student info from form data
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String email = request.getParameter("email");		
+		
+		// create a new student object
+		Student theStudent = new Student(firstName, lastName, email);
+		
+		// add the student to the database
+		studentDbUtil.addStudent(theStudent);
+				
+		// send back to main page (the student list)
+		listStudents(request, response);
 	}
 
 	private void listStudents(HttpServletRequest request, HttpServletResponse response) 
@@ -55,7 +96,7 @@ public class StudentControllerServlet extends HttpServlet {
 		List<Student> students = studentDbUtil.getStudents();
 		
 		// add students to the request
-		request.setAttribute("STUDENT_LIST", students); // name and object
+		request.setAttribute("STUDENT_LIST", students);
 				
 		// send to JSP page (view)
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/list-students.jsp");
