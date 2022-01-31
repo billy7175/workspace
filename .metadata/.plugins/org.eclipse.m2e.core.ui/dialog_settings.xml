@@ -3,6 +3,14 @@
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
 			<item value="C:\Users\Billy\Desktop\JAVA\spring-in5-steps"/>
+			<item value="C:\Users\Billy\Desktop\JAVA\restful-web-services\restful-web-services"/>
+			<item value="C:\Users\Billy\Desktop\JAVA\spring-in5-stepss"/>
+			<item value="C:\Users\Billy\Desktop\JAVA\spring-in5-steps - 복사본"/>
+			<item value="C:\Users\Billy\Desktop\JAVA\restful-web-services (1)\restful-web-services"/>
+			<item value="C:\Users\Billy\Downloads\restful-web-services"/>
+			<item value="C:\Users\Billy\Desktop\JAVA\restful-web-services (2)\restful-web-services"/>
+			<item value="C:\Users\Billy\Desktop\JAVA\restful-web-services (1)"/>
+			<item value="C:\Users\Billy\Downloads\restful-web-services\restful-web-services"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -12,5 +20,9 @@
 			<item value="[groupId].[artifactId]-[version]"/>
 			<item value="[name]"/>
 		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
 </section>
